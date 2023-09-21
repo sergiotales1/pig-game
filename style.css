@@ -8,3 +8,71 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  height: 100vh;
+  background: linear-gradient(to top left, #dde7c7, #77bfa3) no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  width: 50%;
+  background-color: rgba(204, 151, 142, 0.4);
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  height: 400px;
+  position: relative;
+}
+
+.player-label {
+  font-size: 1.5rem;
+}
+
+.score1,
+.score2 {
+  font-size: 2rem;
+  color: #ff3864;
+  margin-top: -40px;
+}
+
+.current-container {
+  font-size: 1.2rem;
+  color: white;
+}
+
+button {
+  position: absolute;
+  padding: 15px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  border: none;
+  border-radius: 15px;
+}
+
+.new-game {
+  top: 240px;
+}
+
+.hold {
+  bottom: 230px;
+}
+
+.roll-dice {
+  top: 320px;
+}
