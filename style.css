@@ -1,0 +1,10 @@
+/* player */
+/* player-1         /   player-2 */
+/* score1           /   score2 */
+/* current-score1   /   current-score2 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
