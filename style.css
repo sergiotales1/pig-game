@@ -13,6 +13,7 @@ body {
   height: 100vh;
   background: linear-gradient(to top left, #dde7c7, #77bfa3) no-repeat;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -43,8 +44,8 @@ body {
   font-size: 1.5rem;
 }
 
-.score1,
-.score2 {
+.score0,
+.score1 {
   font-size: 2rem;
   color: #ff3864;
   margin-top: -40px;
@@ -75,4 +76,19 @@ button {
 
 .roll-dice {
   top: 320px;
+}
+
+.dice {
+  width: 100px;
+  position: absolute;
+  top: 70px;
+  z-index: 1;
+}
+
+.player-active {
+  background-color: #77bfa3;
+}
+
+.hidden {
+  display: none;
 }
