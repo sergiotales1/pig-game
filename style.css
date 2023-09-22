@@ -1,8 +1,3 @@
-/* player */
-/* player-1         /   player-2 */
-/* score1           /   score2 */
-/* current-score1   /   current-score2 */
-
 * {
   margin: 0;
   padding: 0;
@@ -87,6 +82,10 @@ button {
 
 .player-active {
   background-color: #77bfa3;
+}
+
+.player-winner {
+  background-color: salmon;
 }
 
 .hidden {
