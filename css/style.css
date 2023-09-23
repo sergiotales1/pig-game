@@ -110,7 +110,6 @@ body {
 }
 
 button {
-  position: absolute;
   padding: 10px;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.5);
@@ -129,16 +128,20 @@ button::first-letter {
   margin-right: 0.2rem;
 }
 
+.button-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .new-game {
-  top: 220px;
+  margin-bottom: 80px;
 }
 
 .hold {
-  bottom: 210px;
-}
-
-.roll-dice {
-  top: 340px;
+  margin-top: 10px;
 }
 
 .dice {
@@ -150,7 +153,8 @@ button::first-letter {
 
 @media (min-width: 992px) {
   .new-game {
-    top: 100px;
+    margin-bottom: 450px;
+    margin-top: -50px;
   }
 
   button {
@@ -171,11 +175,7 @@ button::first-letter {
   }
 
   .roll-dice {
-    top: 465px;
-  }
-
-  .hold {
-    bottom: 150px;
+    margin-top: -140px;
   }
 }
 
