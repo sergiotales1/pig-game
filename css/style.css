@@ -1,3 +1,5 @@
+@import url(./reset.css);
+@import url(./normalize.css);
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 * {
@@ -169,7 +171,7 @@ button::first-letter {
   }
 
   .roll-dice {
-    top: 490px;
+    top: 465px;
   }
 
   .hold {
