@@ -147,7 +147,7 @@ button::first-letter {
 .dice {
   width: 90px;
   position: absolute;
-  top: 30px;
+  top: 10px;
   z-index: 1;
 }
 
