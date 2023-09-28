@@ -133,7 +133,7 @@ enEl.addEventListener('click', () => {
 });
 
 ptEl.addEventListener('click', () => {
-  modal.style.height = '405px';
+  modal.style.height = 'auto';
   enEl.classList.remove('active');
   ptEl.classList.add('active');
   btnNewGame.textContent = '🔄 Novo Jogo';

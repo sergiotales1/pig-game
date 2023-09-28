@@ -153,7 +153,7 @@ button::first-letter {
 
 .lang {
   position: absolute;
-  top: 50px;
+  top: 30px;
   right: 20px;
   z-index: 1;
   display: flex;
@@ -299,7 +299,7 @@ button::first-letter {
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: white;
-  width: 250px;
+  width: 300px;
   height: 350px;
   z-index: 5;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
