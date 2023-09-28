@@ -6,8 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pig Game</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d28f0790a9.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="modal">
+      <h1>How to play this game ?</h1>
+      <p class="modal-text">
+        1- Click roll dice to get 2 to 6 points, these points will be put into your 'current score'.
+      </p>
+      <p class="modal-text">2- Use hold to save all your current points into your global score.</p>
+      <p class="modal-text">
+        3- If you hold your points or get a 1 then its other player's round to roll the dice.
+      </p>
+      <p class="modal-text">4- First player to get 100 points win the game!</p>
+      <i class="close-modal">X</i>
+    </div>
     <div class="container">
       <img src="./assets/dice-1.png" class="dice" />
       <div class="player player-0 player-active">
@@ -22,6 +36,7 @@
         <button class="new-game">🔄 New game</button>
         <button class="roll-dice">🎲roll dice</button>
         <button class="hold">📥Hold</button>
+        <i class="fa-solid fa-question" id="open-modal"></i>
       </div>
       <div class="player player-1">
         <label class="player-label">PLAYER 2</label>
@@ -32,6 +47,7 @@
         </div>
       </div>
     </div>
+    <div class="overlay"></div>
   </body>
   <script src="script.js"></script>
 </html>
