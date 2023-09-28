@@ -112,7 +112,7 @@ body {
 button {
   padding: 10px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   z-index: 1;
   border: none;
   border-radius: 15px;
@@ -150,55 +150,6 @@ button::first-letter {
   top: 10px;
   z-index: 1;
 }
-/* -------------------------     modal    --------------------------*/
-
-#open-modal {
-  position: absolute;
-  font-size: 1.6rem;
-  bottom: -135px;
-  color: white;
-  background-color: #00487c;
-  padding: 6px;
-  border-radius: 7px;
-  cursor: pointer;
-}
-
-.close-modal {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  font-size: 1.5rem;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: white;
-  width: 250px;
-  height: 350px;
-  z-index: 5;
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 13px;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  top: 0;
-  z-index: 4;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-text {
-  margin-top: 12px;
-  text-align: justify;
-}
 
 @media (min-width: 992px) {
   .new-game {
@@ -229,7 +180,7 @@ button::first-letter {
 }
 
 .player-active {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .player-active .current-container {
@@ -251,7 +202,7 @@ button::first-letter {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .player-winner .player-label {
@@ -265,4 +216,132 @@ button::first-letter {
 
 .player-winner .current-container {
   background-color: rgba(2, 123, 206, 0.5);
+}
+
+/* -------------------------     MODAL    --------------------------*/
+
+#open-modal {
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.6rem;
+  bottom: -135px;
+  color: white;
+  background-color: #00487c;
+  padding: 9px;
+  border-radius: 7px;
+  z-index: 3;
+  transition: 0.4s all;
+}
+
+#open-modal:hover {
+  background-color: white;
+  color: #00487c;
+}
+
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: darkred;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+  width: 250px;
+  height: 350px;
+  z-index: 5;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.modal-text {
+  margin-top: 12px;
+  text-align: justify;
+}
+
+@media (min-width: 992px) {
+  #open-modal {
+    bottom: -80px;
+    font-size: 2rem;
+    padding: 13px;
+  }
+
+  .modal {
+    width: 600px;
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .modal-text {
+    font-size: 1.3rem;
+    margin: 1.4rem 0;
+  }
+
+  .modal h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .close-modal {
+    font-size: 2rem;
+    right: 23px;
+    top: 23px;
+  }
+}
+
+/* -----------------------   colors  --------------------------- */
+
+.lightgreen {
+  color: lightgreen;
+}
+
+.red {
+  color: red;
+}
+
+.darkBlue {
+  color: #00487c;
+}
+
+.lightGray {
+  color: #9b9696;
+}
+
+.yellow {
+  color: goldenrod;
+}
+
+.darkGray {
+  color: #525252;
+}
+
+.darkRed {
+  color: darkred;
+}
+
+span {
+  font-weight: 600;
+}
+
+.zero-opacity {
+  background-color: rgba(255, 255, 255, 0.9);
 }

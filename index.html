@@ -10,16 +10,25 @@
     <script src="https://kit.fontawesome.com/d28f0790a9.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="modal">
-      <h1>How to play this game ?</h1>
+    <div class="modal hidden">
+      <h1>How to <span class="lightgreen">play</span> this game ?</h1>
       <p class="modal-text">
-        1- Click roll dice to get 2 to 6 points, these points will be put into your 'current score'.
+        <span class="darkGray">1</span>- Click <span class="darkRed">ROLL DICE</span> to get 2 to 6
+        points, these points will be store into your <span class="lightGray">Current Score</span>.
       </p>
-      <p class="modal-text">2- Use hold to save all your current points into your global score.</p>
       <p class="modal-text">
-        3- If you hold your points or get a 1 then its other player's round to roll the dice.
+        <span class="darkGray">2</span>- Use <span class="darkBlue">HOLD</span> to save all your
+        current points into your global score.
       </p>
-      <p class="modal-text">4- First player to get 100 points win the game!</p>
+      <p class="modal-text">
+        <span class="darkGray">3</span>- If you hold your points or
+        <span class="red">get</span> a<span class="red"> 1</span> then it's other player's round to
+        roll the dice.
+      </p>
+      <p class="modal-text">
+        <span class="darkGray">4</span>- First player to reach
+        <span class="darkBlue">100</span> points <span class="yellow">win the game</span>!
+      </p>
       <i class="close-modal">X</i>
     </div>
     <div class="container">
@@ -47,7 +56,7 @@
         </div>
       </div>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay hidden"></div>
   </body>
   <script src="script.js"></script>
 </html>

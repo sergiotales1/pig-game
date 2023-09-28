@@ -24,6 +24,9 @@ function init() {
   player1El.classList.remove('player-winner');
   score0El.textContent = 0;
   score1El.textContent = 0;
+  btnNewGame.classList.remove('zero-opacity');
+  btnHold.classList.remove('zero-opacity');
+  btnRoll.classList.remove('zero-opacity');
 }
 btnRoll.addEventListener('click', () => {
   if (playing) {
@@ -53,6 +56,9 @@ btnHold.addEventListener('click', () => {
     if (scores[activePlayer] >= 100) {
       playing = false;
       document.querySelector(`.player-${activePlayer}`).classList.add('player-winner');
+      btnNewGame.classList.add('zero-opacity');
+      btnHold.classList.add('zero-opacity');
+      btnRoll.classList.add('zero-opacity');
       diceEl.classList.add('hidden');
     } else {
       switchPlayers();
@@ -74,3 +80,25 @@ function switchPlayers() {
     player0El.classList.remove('player-active');
   }
 }
+
+// ------------------------  MODAL --------------------------
+
+const openModalEl = document.getElementById('open-modal');
+const closeModalEl = document.querySelector('.close-modal');
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+
+openModalEl.addEventListener('click', () => {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+  openModalEl.classList.add('hidden');
+});
+
+const updateModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+  openModalEl.classList.remove('hidden');
+};
+
+overlay.addEventListener('click', updateModal);
+closeModalEl.addEventListener('click', updateModal);
