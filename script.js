@@ -22,8 +22,12 @@ function init() {
   diceEl.classList.add('hidden');
   player0El.classList.remove('player-winner');
   player1El.classList.remove('player-winner');
+  player0El.classList.add('player-active');
+  player1El.classList.remove('player-active');
   score0El.textContent = 0;
   score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
   btnNewGame.classList.remove('zero-opacity');
   btnHold.classList.remove('zero-opacity');
   btnRoll.classList.remove('zero-opacity');
@@ -53,7 +57,7 @@ btnHold.addEventListener('click', () => {
     scores[activePlayer] += currentScore;
     document.querySelector(`.score${activePlayer}`).textContent = scores[activePlayer];
     document.querySelector(`.current-score${activePlayer}`).textContent = 0;
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 20) {
       playing = false;
       document.querySelector(`.player-${activePlayer}`).classList.add('player-winner');
       btnNewGame.classList.add('zero-opacity');
